@@ -34,18 +34,11 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
-                child: Container(
-                height: 80.0,
-                width: 80.0,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-                child: Center(child: Text("Break",style:TextStyle(color:Color(0xffcd3939),fontSize: 16 ) ,)),
-              ),),
-              SizedBox(width: 20.0,),
-              Center(
-                child: Container(
+                child: GestureDetector(
+                  onTap: (){
+                    print('You have taken a break');
+                  },
+                  child: Container(
                   height: 80.0,
                   width: 80.0,
                   decoration: BoxDecoration(
@@ -53,6 +46,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     shape: BoxShape.circle,
                   ),
                   child: Center(child: Text("Break",style:TextStyle(color:Color(0xffcd3939),fontSize: 16 ) ,)),
+              ),
+                ),),
+              SizedBox(width: 20.0,),
+              Center(
+                child: GestureDetector(
+                  onTap: (){
+                    print('You have started');
+                  },
+                  child: Container(
+                    height: 80.0,
+                    width: 80.0,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(child: Text("Start",style:TextStyle(color:Color(0xffcd3939),fontSize: 16 ) ,)),
+                  ),
                 ),),
             ],
           )
